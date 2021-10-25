@@ -1,0 +1,133 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awesome Cover Letter
+% XeLaTeX Template
+% Version 1.1 (9/1/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Claud D. Park (posquit0.bj@gmail.com)
+% Lars Richter (mail@ayeks.de)
+% With modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template must be compiled with XeLaTeX, the below lines will ensure this
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt, letter]{ag-cv} % A4 paper size by default, use 'letterpaper' for US letter
+
+\geometry{left=2cm, top=1.3cm, right=2cm, bottom=1.9cm, footskip=.5cm} % Configure page margins with geometry
+ 
+\fontdir[fonts/] % Specify the location of the included fonts
+\usepackage{ragged2e}
+
+% Color for highlights
+\definecolor{awesome}{HTML}{1c85c7} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
+%\definecolor{awesome}{HTML}{CA63A8} % Uncomment if you would like to specify your own color
+
+% Colors for text - uncomment and modify
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%----------------------------------------------------------------------------------------
+
+
+
+\name{}{Alvaro Gomariz}
+\address{Computer Vision Laboratory, ETF C110, 
+Sternwartstrasse 7, 
+CH-8092 Zürich}
+% \mobile{(+82) 10-9030-1843}
+
+\email{alvaroeg@ethz.ch}
+\orcid{0000-0002-6172-5190}
+% \github{https://github.com/alvgom}
+\linkedin{alvarogomariz}
+
+% \position{Software Engineer{\enskip\cdotp\enskip}Security Expert} % Your expertise/fields
+% \quote{``Make the change that you want to see in the world."} % A quote or statement
+
+%----------------------------------------------------------------------------------------
+%	RECIPIENT/POSITION/LETTER INFORMATION
+%	All of the below lines must be filled out
+%----------------------------------------------------------------------------------------
+
+\recipient{}{Roche\\Mr. Kevin Heller\\Grenzacherstrasse 124\\4058 Basel} % The company being applied to
+
+\letterdate{Zurich, 17th September 2020} % The date on the letter, default is the date of compilation
+
+\lettertitle{Application for Postdoctoral Research Fellow Position, ID 202008-122182} % The title of the letter
+
+\letteropening{Dear Mr. Heller,} % How the letter is opened
+
+\letterclosing{Yours sincerely,} % How the letter is closed
+
+% \letterenclosure[Attached]{Curriculum Vitae} % Any enclosures with the letter
+
+% \makecvfooter{\today}{Alvaro Gomariz~~~·~~~Cover Letter}{} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
+  
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvheader % Print the header
+
+\makelettertitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\begin{cvletter}
+
+%------------------------------------------------
+
+% \lettersection{About Me}
+
+
+% \lettersection{Why Initech?}
+
+
+% \lettersection{Why Me?}
+\begin{flushleft}
+I have learnt about the Roche Postdoctoral Fellowship program through previous interaction with the pRED Informatics team at Roche. Having already had a chance to discuss the present project in ophthalmologic image analysis in the course of the grant application, I am excited about this opportunity and would hereby like to formally apply for this position. 
+
+I have always been passionate about addressing biomedical research problems from a computational perspective, which is why I chose to study a degree in biomedical engineering with a Bachelor at the Universidad Carlos III in Madrid and a Master at ETH Zurich, for both of which I was awarded a prize for graduating top of my class. My PhD thesis, which I am due to complete within the next months, has been a close collaboration between the Computer Vision Lab at ETH Zurich and the University Hospital Zurich, and has focused on gaining insight into blood cell production processes through image-based characterization of in-house state-of-the-art datasets. My latest research activity has consisted in facilitating the application of deep neural networks for segmentation in complex 3D fluorescence microscopy datasets, with a focus on attention mechanisms, and more recently on semi-supervised learning through data augmentation (namely contrastive learning). 
+
+In the course of these projects I have acquired a solid understanding of the mathematical foundations of artificial intelligence, and mastered machine learning frameworks such as Tensorflow. The results of this research have been published in renowned scientific journals, including in Nature Communications, and one manuscript is currently under revision in Nature Machine Intelligence. Moreover, I have contributed to research collaborations the results of which have been published in a range of journals in different fields, including Cell Stem Cell. Finally, I have presented my findings at scientific conferences such as ISBI, and have been granted the “best presentation award” at the Day of Clinical Research at University Hospital of Zurich in 2018. 
+
+Besides my research experience, I have remotely managed a team of engineers in the company MicroscopeIT as part of a bioimage informatics project. In both the industrial and academic sides of my career, I have worked with multidisciplinary teams, which has allowed me to develop better leadership and communication skills. In addition, integrating information from different fields influenced me towards a more independent approach of conceiving and organizing my own ideas. 
+
+I am currently looking for new challenges towards which I can direct my research activity, while also expanding my career horizon by learning about translating state-of-the-art artificial intelligence methods into industrial solutions in the healthcare sector. I am therefore convinced that the Roche Postdoctoral Fellowship program is the perfect opportunity for me to grow professionally, and I trust that my experience matches the required qualifications. Should my application be successful, I would be ready start this position as soon as I graduate from my PhD, at the latest in March 2021. 
+
+Thank you for taking the time to review my application. I am highly motivated to apply my machine learning expertise to the challenge of effective diagnosis of ophthalmic images, and I would be happy to present myself personally. 
+
+
+\end{flushleft}
+
+\end{cvletter}
+
+%----------------------------------------------------------------------------------------
+
+\makeletterclosing % Print the signature and enclosures
+
+\end{document}

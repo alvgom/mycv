@@ -46,6 +46,7 @@
 %-------------------------------------------------------------------------------
 %                3rd party packages
 %-------------------------------------------------------------------------------
+
 % Needed to make fixed length table
 \RequirePackage{array}
 % Needed to handle list environment
@@ -74,6 +75,8 @@
 \RequirePackage{unicode-math}
 % Needed to use icons from font-awesome
 % (https://github.com/posquit0/latex-fontawesome)
+% Needed for academic icons
+\usepackage{academicons}
 \RequirePackage{fontawesome}
 \RequirePackage[default,opentype]{sourcesanspro}
 % Needed for the photo ID
@@ -131,6 +134,8 @@
 \definecolor{purple}{HTML}{D3A4F9}
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
+\definecolor{realblue}{rgb}{0.0,0.0,1.0}
+
 % Text colors
 \definecolor{darktext}{HTML}{414141}
 \colorlet{text}{darkgray}
@@ -194,7 +199,8 @@
 % Configure styles for each CV elements
 % For fundamental structures
 \newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{graytext} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
+% \newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\fontsize{28pt}{1em}\headerfontlight\bfseries\color{text} #1}}
 \newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
@@ -208,8 +214,8 @@
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\entrydatestyleag}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\entrydatestyleag}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of subentry
@@ -221,9 +227,15 @@
 
 % For elements of honor
 \newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honoritstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
 \newcommand*{\honorpositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\honordatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+% \newcommand*{\honordatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honordatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
 \newcommand*{\honorlocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+
+% For elements of publications
+\newcommand*{\publicationstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{text} #1}}
+\newcommand*{\publicationtitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\slshape\color{text} #1}}
 
 % For elements of skill
 \newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
@@ -309,6 +321,11 @@
 % Usage: \linkedin{<linked-in-nick>}
 \newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
 
+\newcommand*{\orcid}[1]{\def\@orcid{#1}}
+
+\newcommand*{\gscholar}[1]{\def\@gscholar{#1}}
+
+
 % Usage: \twitter{<twitter handle>}
 \newcommand*{\twitter}[1]{\def\@twitter{#1}}
 
@@ -378,12 +395,12 @@
 \newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{6mm}
-\newcommand{\acvHeaderAfterQuoteSkip}{5mm}
+\newcommand{\acvHeaderAfterSocialSkip}{3mm}%{6mm}
+\newcommand{\acvHeaderAfterQuoteSkip}{2mm}%{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvSectionTopSkip}{1mm}
+\newcommand{\acvSectionContentTopSkip}{2mm}
 
 
 %-------------------------------------------------------------------------------
@@ -464,7 +481,6 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://github.com/\@github}{\faGithubSquare\acvHeaderIconSep\@github}%
         }%
       \ifthenelse{\isundefined{\@gitlab}}%
         {}%
@@ -483,6 +499,18 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\acvHeaderIconSep\@linkedin}%
+        }%
+      \ifthenelse{\isundefined{\@orcid}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://orcid.org/\@orcid}{\aiOrcidSquare\acvHeaderIconSep\@orcid}%
+        }%
+        \ifthenelse{\isundefined{\@gscholar}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{\@gscholar}{\aiGoogleScholar\acvHeaderIconSep Alvaro Gomariz}%
         }%
       \ifthenelse{\isundefined{\@twitter}}%
         {}%
@@ -546,7 +574,7 @@
 % Usage: \cvsubsection{<subsection-title>}
 \newcommand{\cvsubsection}[1]{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-3mm}
+  \vspace{-2.5mm}
   \subsectionstyle{#1}
   \phantomsection
 }
@@ -583,28 +611,16 @@
   \end{tabular*}%
 }
 
-% \newcommand*{\cventryag}[5]{%
-%   \vspace{-2.0mm}
-%   \setlength\tabcolsep{0pt}
-%   \setlength{\extrarowheight}{0pt}
-%   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-%     \entrytitlestyle{#1} - \entrytitlestyle{#2}, \entrytitlestyle{#3} & \entrydatestyleag{#4} \\
-%     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
-%   \end{tabular*}%
-% }
-
 \newcommand*{\cventryag}[5]{%
-  \vspace{-2.0mm}
+  \vspace{-3.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \ifempty{#2#3}
-      {\entrytitlestyle{#1} & \entrydatestyleag{#4} \\}
-      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyleag{#4} \\}
+    \entrytitlestyle{#1} - \entrytitlestyle{#2}, \entrytitlestyle{#3} & \entrydatestyleag{#4} \\
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
 }
+
 
 
 % Define an environment for cvsubentry
@@ -631,23 +647,107 @@
   \end{tabular*}
 }
 
+
 % Define an environment for cvhonor
 \newenvironment{cvhonors}{%
   \vspace{\acvSectionContentTopSkip}
   \vspace{-2mm}
-  \begin{center}
-    \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 4.0cm} R{2.5cm}}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 1cm} R{1cm}}
 }{%
-    \end{tabular*}
-  \end{center}
+\end{tabular*}
 }
 % Define a line of cv information(honor, award or something else)
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
 \newcommand*{\cvhonor}[4]{%
-  \honordatestyle{#4} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+\ifempty{#4}
+    {\honorpositionstyle{#1} \honortitlestyle{#2} & \honordatestyle{#3}\\}
+    {\honorpositionstyle{#1} \honortitlestyle{#2} - \honortitlestyle{#4} & \honordatestyle{#3}\\}
 }
+
+
+\newenvironment{cvrefs}{%  
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth}}
+%   \paragraphstyle
+}{%
+\end{tabular*}
+  \par
+%   \vspace{2mm}
+}
+
+
+\newcommand*{\cvreference}[3]{%
+    \ifempty{#3}
+        {\honorpositionstyle{#1}: \honortitlestyle{#2}\\}
+        {\honorpositionstyle{#1}: \honortitlestyle{#2}, \honortitlestyle{#3}\\}
+}
+
+
+\newenvironment{cvpublications}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{1mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-4.0mm}
+}
+  
+
+
+\newcommand*{\cvpublication}[7]{%
+  \vspace{-4.0mm}
+%   \item {\publicationstyle{#4}, \publicationstyle{#5}}\\
+
+  \ifthenelse{\equal{\publicationstype}{short} \and \equal{#1}{short}}
+    {%short
+         \item {\publicationstyle{#4},\,\publicationstyle{#5}}\\
+    }
+    {%long
+    \ifthenelse{\isempty{#6}}
+        {
+        \item {\publicationstyle{#2}\,``\publicationstyle{#3}", \publicationtitlestyle{#4}~\publicationtitlestyle{#5}}\\
+        }
+        {
+        \item {\publicationstyle{#2}\,``\publicationstyle{#3}", \publicationtitlestyle{#4}~\publicationstyle{#5}~(\publicationstyle{#6}}). \publicationstyle{doi: \href{https://doi.org/#7}{\color{awesome}{#7}}}\\
+        }
+    }
+}
+
+\newcommand*{\cvpreprint}[5]{%
+  \vspace{-4.0mm}
+%   \item {\publicationstyle{#4}, \publicationstyle{#5}}\\
+
+  \ifthenelse{\equal{\publicationstype}{short} \and \equal{#1}{short}}
+    {%short
+         \item {\publicationstyle{#4},\,\publicationstyle{#5}}\\
+    }
+    {%long
+        \item {\publicationstyle{#2}\,``\publicationstyle{#3}", \publicationstyle{#4}~(\publicationstyle{#5}})\\
+    }
+}
+
+\newcommand*{\cvtalk}[4]{%
+  \vspace{-4.0mm}
+%   \item {\publicationstyle{#4}, \publicationstyle{#5}}\\
+
+  \ifthenelse{\equal{\publicationstype}{short} \and \equal{#1}{short}}
+    {%short
+         \item {\publicationstyle{#3},\,\publicationstyle{#4}}\\
+    }
+    {%long
+        \item {``\publicationstyle{#2}",\,\publicationtitlestyle{#3}~(\publicationstyle{#4})}\\
+    }
+}
+
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
@@ -669,7 +769,7 @@
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
-  \vspace{-4.0mm}
+  \vspace{-4.8mm} % Space bewteen cv entry title and list
   \begin{justify}
   \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
     \setlength{\parskip}{0pt}
@@ -703,25 +803,31 @@
 % Define a title of the cover letter
 % Usage: \makelettertitle
 \newcommand*{\makelettertitle}{%
-  \vspace{8.4mm}
+%   \vspace{8.4mm}
+  \vspace{7mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \recipienttitlestyle{\@recipientname} & \letterdatestyle{\@letterdate}
-  \end{tabular*}
+%   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+%     \recipienttitlestyle{\@recipientname} 
+%   \end{tabular*}
   \begin{singlespace}
     \recipientaddressstyle{\@recipientaddress} \\\\
   \end{singlespace}
+  \vspace{-3.1mm}
+  \letterdatestyle{\@letterdate} \\\\
+  \vspace{-1.65mm}
   \ifthenelse{\isundefined{\@lettertitle}}
     {}
     {\lettertitlestyle{\@lettertitle} \\}
+    \\ 
   \lettertextstyle{\@letteropening}
 }
 
 % Define a closing of the cover letter
 % Usage: \makeletterclosing
 \newcommand*{\makeletterclosing}{%
-  \vspace{3.4mm}
+  \vspace{2mm}
+  % \vspace{3.4mm}
   \lettertextstyle{\@letterclosing} \\\\
   \letternamestyle{\@firstname\ \@lastname}
   \ifthenelse{\isundefined{\@letterenclosure}}
