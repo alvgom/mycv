@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awesome Cover Letter
+% XeLaTeX Template
+% Version 1.1 (9/1/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Claud D. Park (posquit0.bj@gmail.com)
+% Lars Richter (mail@ayeks.de)
+% With modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template must be compiled with XeLaTeX, the below lines will ensure this
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt, letter]{ag-cv} % A4 paper size by default, use 'letterpaper' for US letter
+
+\geometry{left=2cm, top=1.3cm, right=2cm, bottom=1.9cm, footskip=.5cm} % Configure page margins with geometry
+ 
+\fontdir[fonts/] % Specify the location of the included fonts
+\usepackage{ragged2e}
+
+% Color for highlights
+\definecolor{awesome}{HTML}{1c85c7} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
+%\definecolor{awesome}{HTML}{CA63A8} % Uncomment if you would like to specify your own color
+
+% Colors for text - uncomment and modify
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%----------------------------------------------------------------------------------------
+
+
+
+\name{}{Alvaro Gomariz}
+\address{B\"andlistrasse 45, 
+CH-8064 Zürich}
+% \mobile{(+82) 10-9030-1843}
+
+\email{alvarogomarizc@gmail.com}
+\orcid{0000-0002-6172-5190}
+% \github{https://github.com/alvgom}
+\linkedin{alvarogomariz}
+\gscholar{https://scholar.google.com/citations?hl=en&user=v4JtSZcAAAAJ}
+
+
+% \position{Software Engineer{\enskip\cdotp\enskip}Security Expert} % Your expertise/fields
+% \quote{``Make the change that you want to see in the world."} % A quote or statement
+
+%----------------------------------------------------------------------------------------
+%	RECIPIENT/POSITION/LETTER INFORMATION
+%	All of the below lines must be filled out
+%----------------------------------------------------------------------------------------
+
+% \recipient{}{Roche} % The company being applied to
+
+\letterdate{Zurich, 22th December 2021} % The date on the letter, default is the date of compilation
+
+\lettertitle{Application for AI/ML Engineer - Biomedical AI position} % The title of the letter
+
+\letteropening{Dear Hiring Manager,} % How the letter is opened
+
+\letterclosing{Yours faithfully,} % How the letter is closed
+
+% \letterenclosure[Attached]{Curriculum Vitae} % Any enclosures with the letter
+
+% \makecvfooter{\today}{Alvaro Gomariz~~~·~~~Cover Letter}{} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
+  
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvheader % Print the header
+
+\makelettertitlenorec % Print the title
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\begin{cvletter}
+
+%------------------------------------------------
+
+% \lettersection{About Me}
+
+
+
+
+% \lettersection{Why Me?}
+\begin{flushleft}
+Advancing a data-based understanding of healthcare has been the passion inspiring my career. In particular, I have focused on the use of computer vision to gain biological insight from complex biomedical images. 
+
+The beginning of my PhD at the Computer Vision Lab at ETH Zurich coincided with the surge in deep learning research, which was key for my studies on the analysis of multidimensional microscopy datasets. My project, carried out in collaboration with the University Hospital Zurich, focused on designing machine learning (ML) and spatial statistics tools for an image-based understanding of blood production. In the course of my PhD I acquired a solid understanding of the current ML literature and was able to make my own contributions; the results of my research have been published in renowned scientific journals, including Nature Communications, Nature Machine Intelligence, and Science Advances. My work has also been recognized by the Center for Experimental and Clinical Imaging Technologies (EXCITE) Zurich, which granted me the best PhD Award 2021 in the field of biomedical imaging. 
+
+My interest in artificial intelligence (AI) research always went beyond the design of its tools, as I was fascinated by the application possibilities to numerous biomedical prediction tasks; I have initiated several collaborations with biologists, clinicians, and healthcare companies to apply my research to different image modalities (incl. ultrasounds, CT, and multiple microscopy types) and underlying questions. I also applied my ML expertise as an independent consultant for designing and delivering a product for image segmentation and spatial statistics to clients in the biotechnology sector, where I gained experience in supervising a team of software engineers.  
+ 
+I have always been passionate about the quest to advance healthcare, which is why I recently chose to begin my current postdoc in the pharmaceutical industry. In this position at Roche I have learned to work following Agile development principles and design new deep learning solutions in order to advance the analysis capabilities of an internal ophthalmology product. 
+
+I am thus very excited about the open position as AI/ML engineer at GSK because it would allow me to employ my knowledge in applied AI in healthcare and its translation to commercial solutions. Furthermore, I expect to be exposed to new healthcare challenges in which I would expand my ML and leadership skills. 
+
+I believe that my experience and accomplishments make me an excellent fit for this position, as they have allowed me to develop the technical expertise working with complex biomedical datasets, an understanding of the underlying needs of the analyses, as well as the skills for effective communication and collaboration across disciplines to bridge the gap between computer science and biology / medicine. 
+
+Thank you for taking the time to review my application. Since my current position is ongoing, I would ask you to treat my application as confidential. I am highly motivated to apply my ML expertise to the real-world biomedical problems at GSK, and I trust that I can bring new and creative ideas for impactful findings.
+
+
+\end{flushleft}
+
+\end{cvletter}
+
+%----------------------------------------------------------------------------------------
+
+\makeletterclosing % Print the signature and enclosures
+
+\end{document}

@@ -1,0 +1,133 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awesome Cover Letter
+% XeLaTeX Template
+% Version 1.1 (9/1/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Claud D. Park (posquit0.bj@gmail.com)
+% Lars Richter (mail@ayeks.de)
+% With modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template must be compiled with XeLaTeX, the below lines will ensure this
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt, letter]{ag-cv} % A4 paper size by default, use 'letterpaper' for US letter
+
+\geometry{left=2cm, top=1.3cm, right=2cm, bottom=1.9cm, footskip=.5cm} % Configure page margins with geometry
+ 
+\fontdir[fonts/] % Specify the location of the included fonts
+\usepackage{ragged2e}
+
+% Color for highlights
+\definecolor{awesome}{HTML}{1c85c7} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
+%\definecolor{awesome}{HTML}{CA63A8} % Uncomment if you would like to specify your own color
+
+% Colors for text - uncomment and modify
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%----------------------------------------------------------------------------------------
+
+
+
+\name{}{Alvaro Gomariz}
+\address{B\"andlistrasse 45, 
+CH-8064 Zürich}
+% \mobile{(+82) 10-9030-1843}
+
+\email{alvarogomarizc@gmail.com}
+\orcid{0000-0002-6172-5190}
+% \github{https://github.com/alvgom}
+\linkedin{alvarogomariz}
+\gscholar{https://scholar.google.com/citations?hl=en&user=v4JtSZcAAAAJ}
+
+
+% \position{Software Engineer{\enskip\cdotp\enskip}Security Expert} % Your expertise/fields
+% \quote{``Make the change that you want to see in the world."} % A quote or statement
+
+%----------------------------------------------------------------------------------------
+%	RECIPIENT/POSITION/LETTER INFORMATION
+%	All of the below lines must be filled out
+%----------------------------------------------------------------------------------------
+
+% \recipient{}{Roche} % The company being applied to
+
+\letterdate{Zurich, 28th October 2021} % The date on the letter, default is the date of compilation
+
+\lettertitle{Application for Research Scientist position} % The title of the letter
+
+\letteropening{To Whom It May Concern,} % How the letter is opened
+
+\letterclosing{Yours sincerely,} % How the letter is closed
+
+% \letterenclosure[Attached]{Curriculum Vitae} % Any enclosures with the letter
+
+% \makecvfooter{\today}{Alvaro Gomariz~~~·~~~Cover Letter}{} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
+  
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvheader % Print the header
+
+\makelettertitlenorec % Print the title
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\begin{cvletter}
+
+%------------------------------------------------
+
+% \lettersection{About Me}
+
+
+% \lettersection{Why Initech?}
+
+
+% \lettersection{Why Me?}
+\begin{flushleft}
+Research towards a data-based understanding of life has been the passion inspiring my career. I started my studies on biomedical engineering with the hope of finding paths leading to this goal, but it was not until my PhD that I understood the potential in investigating the knowledge hidden in data. Coinciding with the surge of deep learning research and the abundance of possibilities it opened, I could connect the fields of machine learning and computer vision to reveal new patterns in the  mechanisms of blood formation from complex multidimensional microscopy datasets. During that time I encountered multiple microscopy image analysis studies of the brain, which beyond serving as inspiration for my own research, shed light on my desire to understand the brain function as part of my career passion. It is for this reason that I could not be more excited to find this open position, for which I trust my multidisciplinar profile can be an excellent fit and bring fresh ideas to the project.  
+
+My research activity during my PhD in computer vision at ETH Zurich consisted in facilitating the application of deep neural networks for segmentation and subsequent spatial analysis in complex 3D and 4D fluorescence microscopy datasets, with a focus on attention mechanisms, multi-domain learning, and applications of uncertainty estimation. At the moment I am working as a postdoctoral researcher in Roche, where I am investigating the use of self-supervised and semi-supervised learning methods for leveraging vast amounts of unlabeled data in 3D ophthalmology datasets, namely optical coherence tomography (OCT), and how to perform rigorous validation to meet the standards of healthcare products. This latter position has also provided me with an excellent opportunity to acquire knowledge on research translation to industry, product development, and corporate coding practises. 
+
+In the course of these projects I have acquired a solid understanding of the mathematical foundations of artificial intelligence, and mastered machine learning frameworks such as Tensorflow. The results of this research have been published in renowned scientific journals, including in Nature Communications, Nature Machine Intelligence, and one manuscript is currently under revision in Science Advances. Moreover, I have contributed to research collaborations the results of which have been published in a range of journals in different fields, including Cell Stem Cell. Finally, I have presented my findings at scientific conferences such as ISBI, and have been granted the “best presentation award” at the Day of Clinical Research at University Hospital of Zurich in 2018. 
+
+Besides my research experience, I have remotely managed a team of engineers in the company MicroscopeIT as part of a bioimage informatics project. In both the industrial and academic sides of my career, I have worked with multidisciplinary teams, which has allowed me to develop better leadership and communication skills. In addition, integrating information from different fields influenced me towards a more independent approach of conceiving and organizing my own ideas. 
+
+I am convinced that this position is the perfect position for my research interests and, without doubt, to grow professionally, and I trust that my experience matches the required qualifications. Thank you for taking the time to review my application. I am highly motivated to apply my multidisciplinar skills to the challenges of learning from brain images, and I would be happy to present myself personally. 
+
+
+
+\end{flushleft}
+
+\end{cvletter}
+
+%----------------------------------------------------------------------------------------
+
+\makeletterclosing % Print the signature and enclosures
+
+\end{document}

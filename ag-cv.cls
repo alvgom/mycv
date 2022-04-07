@@ -92,6 +92,9 @@
   pdfkeywords={}
 }
 
+% AG packages
+
+
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -661,9 +664,9 @@
 % Define a line of cv information(honor, award or something else)
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
 \newcommand*{\cvhonor}[4]{%
-\ifempty{#4}
-    {\honorpositionstyle{#1} \honortitlestyle{#2} & \honordatestyle{#3}\\}
+\ifthenelse{\equal{\awardsmoney}{yes} \and \not \isempty{#4}}
     {\honorpositionstyle{#1} \honortitlestyle{#2} - \honortitlestyle{#4} & \honordatestyle{#3}\\}
+    {\honorpositionstyle{#1} \honortitlestyle{#2} & \honordatestyle{#3}\\}
 }
 
 
@@ -717,7 +720,7 @@
         \item {\publicationstyle{#2}\,``\publicationstyle{#3}", \publicationtitlestyle{#4}~\publicationtitlestyle{#5}}\\
         }
         {
-        \item {\publicationstyle{#2}\,``\publicationstyle{#3}", \publicationtitlestyle{#4}~\publicationstyle{#5}~(\publicationstyle{#6}}). \publicationstyle{doi: \href{https://doi.org/#7}{\color{awesome}{#7}}}\\
+        \item {\publicationstyle{#2}\,``\publicationstyle{#3}", \publicationtitlestyle{#4}~\publicationstyle{#5}~\publicationstyle{(#6)}}. \publicationstyle{doi: \href{https://doi.org/#7}{\color{awesome}{#7}}}\\
         }
     }
 }
@@ -731,7 +734,9 @@
          \item {\publicationstyle{#4},\,\publicationstyle{#5}}\\
     }
     {%long
-        \item {\publicationstyle{#2}\,``\publicationstyle{#3}", \publicationstyle{#4}~(\publicationstyle{#5}})\\
+        \ifthenelse{\isempty{#5}}
+        {\item {\publicationstyle{#2}\,``\publicationstyle{#3}", \publicationstyle{#4}}\\}
+        {\item {\publicationstyle{#2}\,``\publicationstyle{#3}", \publicationstyle{#4}~(\publicationstyle{#5})}\\}
     }
 }
 
@@ -756,7 +761,8 @@
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.75}}}
+    % \real{0.9}}}
 }{%
     \end{tabular*}
   \end{center}
@@ -820,6 +826,26 @@
     {}
     {\lettertitlestyle{\@lettertitle} \\}
     \\ 
+  \lettertextstyle{\@letteropening}
+}
+
+
+\newcommand*{\makelettertitlenorec}{%
+%   \vspace{8.4mm}
+  \vspace{7mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+%   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+%     \recipienttitlestyle{\@recipientname} 
+%   \end{tabular*}
+  \vspace{1.1mm}
+  \letterdatestyle{\@letterdate} \\\\
+  \vspace{1.65mm}
+  \ifthenelse{\isundefined{\@lettertitle}}
+    {}
+    {\lettertitlestyle{\@lettertitle} \\}
+    \\
+    \\
   \lettertextstyle{\@letteropening}
 }
 

@@ -18,18 +18,23 @@
 \documentclass[12pt, a4paper]{ag-cv} % A4 paper size by default, use 'letterpaper' for US letter
 
 
-\newcommand{\cvtype}{long}
-\newcommand{\authornames}{long}
-\newcommand{\publicationstype}{long}
+\newcommand{\cvtype}{long} % short or long
+\newcommand{\awardsmoney}{no} % yes or no
+\newcommand{\showsupervisors}{no} % yes or no
+\newcommand{\authornames}{long} % short or long
+\newcommand{\publicationstype}{long} % short or long
 
-\ifthenelse{\equal{\cvtype}{short}}
-    { %short
-    \geometry{left=1.5cm, top=1.5cm, right=1.5cm, bottom=1.5cm, footskip=.5cm}
-    }
-    {%long
-    \geometry{left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm, footskip=.5cm}
-    }
+
+% \ifthenelse{\equal{\cvtype}{short}}
+%     { %short
+%     \geometry{left=1.5cm, top=1.5cm, right=1.5cm, bottom=1.5cm, footskip=.5cm}
+%     }
+%     {%long
+%     \geometry{left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm, footskip=.5cm}
+%     }
     
+\geometry{left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm, footskip=.5cm}
+
 
 \usepackage{multicol}
 \usepackage{parallel}
@@ -56,16 +61,19 @@
 %	Comment any of the lines below if they are not required
 %----------------------------------------------------------------------------------------
  
-\name{}{Alvaro Gomariz}
-\address{Computer Vision Laboratory, ETF C110, 
-Sternwartstrasse 7, 
-CH-8092 Zürich}
+\name{}{Supplementary Information}
+% \address{Computer Vision Laboratory, ETF C110, 
+% Sternwartstrasse 7, 
+% CH-8092 Zürich}
 % \mobile{(+82) 10-9030-1843}
 
-\email{alvaroeg@ethz.ch}
+% \mobile{(+82) 10-9030-1843}
+\email{alvaro.gomariz@roche.com}
 \orcid{0000-0002-6172-5190}
-% \github{https://github.com/alvgom}
 \linkedin{alvarogomariz}
+\gscholar{https://scholar.google.com/citations?hl=en&user=v4JtSZcAAAAJ}
+\mobile{ +41 (0)76 773 14 72}
+
 %\skype{skypeid}
 %\stackoverflow{SOid}{SOname}
 %\twitter{@twit}
@@ -97,6 +105,7 @@ CH-8092 Zürich}
 
 \vspace{0.25cm}
 \input{cv-sections/publications.tex}
+\input{cv-sections/student_supervision.tex}
 
 
 
