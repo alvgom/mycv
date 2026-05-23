@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awesome Cover Letter
+% XeLaTeX Template
+% Version 1.1 (9/1/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Claud D. Park (posquit0.bj@gmail.com)
+% Lars Richter (mail@ayeks.de)
+% With modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template must be compiled with XeLaTeX, the below lines will ensure this
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt, letter]{ag-cv} % A4 paper size by default, use 'letterpaper' for US letter
+
+\geometry{left=2cm, top=1.3cm, right=2cm, bottom=1.9cm, footskip=.5cm} % Configure page margins with geometry
+ 
+\fontdir[fonts/] % Specify the location of the included fonts
+\usepackage{ragged2e}
+
+% Color for highlights
+\definecolor{awesome}{HTML}{1c85c7} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
+%\definecolor{awesome}{HTML}{CA63A8} % Uncomment if you would like to specify your own color
+
+% Colors for text - uncomment and modify
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%----------------------------------------------------------------------------------------
+
+
+
+\name{}{Alvaro Gomariz}
+\address{Imfeldstrasse 103, 
+CH-8037 Zürich}
+% \mobile{(+82) 10-9030-1843}
+
+\email{alvarogomarizc@gmail.com}
+\orcid{0000-0002-6172-5190}
+% \github{https://github.com/alvgom}
+\linkedin{alvarogomariz}
+\gscholar{https://scholar.google.com/citations?hl=en&user=v4JtSZcAAAAJ}
+
+
+% \position{Software Engineer{\enskip\cdotp\enskip}Security Expert} % Your expertise/fields
+% \quote{``Make the change that you want to see in the world."} % A quote or statement
+
+%----------------------------------------------------------------------------------------
+%	RECIPIENT/POSITION/LETTER INFORMATION
+%	All of the below lines must be filled out
+%----------------------------------------------------------------------------------------
+
+% \recipient{}{Roche} % The company being applied to
+
+\letterdate{Zurich, 5th January 2025} % The date on the letter, default is the date of compilation
+
+\lettertitle{Application for Research Scientist position} % The title of the letter
+
+\letteropening{Dear Hiring Team,} % How the letter is opened
+
+\letterclosing{Best regards,} % How the letter is closed
+
+% \letterenclosure[Attached]{Curriculum Vitae} % Any enclosures with the letter
+
+% \makecvfooter{\today}{Alvaro Gomariz~~~·~~~Cover Letter}{} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
+  
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvheader % Print the header
+
+\makelettertitlenorec % Print the title
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\begin{cvletter}
+
+%------------------------------------------------
+
+% \lettersection{About Me}
+
+
+
+
+% \lettersection{Why Me?}
+\begin{flushleft}
+I am excited to apply for this position at Anthropic. With a PhD in Computer Vision from ETH Zurich and over four additional years of experience developing AI products in the pharmaceutical industry, I bring a combination of technical expertise, collaborative leadership, and a passion for creating transformative AI solutions. 
+
+In my current role at Roche, a global leader in the pharmaceutical industry, I have led the development of innovative products that leverage advanced machine learning to create unique solutions while ensuring rigorous safety and evaluation standards. Highlights include leading the creation of a company-wide vision foundation model for digital pathology, designing an AI assistant that accelerates clinical trials by analyzing colonoscopy videos, and creating a novel unsupervised domain adaptation model in ophthalmology to extend the use of existing products to new medical devices. I have also helped drive more effective outcomes for our projects by implementing cross-functional matrix teams and integrating best practices in software engineering in our group.
+
+I am personally driven by working on projects that bring a meaningful societal impact. While my recent focus has been on improving the lives of patients through AI-driven healthcare solutions, I am increasingly inspired by the potential of AI assistants, such as those Anthropic is pioneering. I believe these assistants have the potential to not only accelerate projects like those I have worked on, i.e. using AI for healthcare applications, but also enable countless other impactful applications, such as improving education accessibility or environmental conservation. This is why I am inspired by Anthropic’s mission of building safe, ethical and groundbreaking AI systems. Moreover, while my expertise has centered on computer vision, the recent advancements in AI have made it clear to me that the future lies in models that seamlessly integrate multiple modalities. Therefore I am eager to be part of these advances at Anthropic.
+
+Anthropic’s commitment to responsibility and collaboration deeply resonates with me, as these are values I have kept throughout my career. I am confident that my experience in cutting-edge AI research, coupled with my ability to deliver impactful, user-focused products, positions me to make a meaningful contribution to your vision. I would be delighted to bring my skills and enthusiasm to help advance Anthropic's groundbreaking work in AI.
+
+\end{flushleft}
+
+\end{cvletter}
+
+%----------------------------------------------------------------------------------------
+
+\makeletterclosing % Print the signature and enclosures
+
+\end{document}

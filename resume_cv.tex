@@ -41,6 +41,7 @@
 \usepackage{multicol}
 \usepackage{parallel}
 
+\usepackage{pdfpages}
 
 
 % \ifthenelse{\equal{\cvtype}{short}}
@@ -64,8 +65,9 @@
 %----------------------------------------------------------------------------------------
  
 \name{}{Alvaro Gomariz}
-\address{B\"andlistrasse 45, CH-8064 Z\"urich}
+% \address{Imfeldstrasse 103, CH-8037 Z\"urich}
 
+% \email{alvarogomarizc@gmail.com}
 \email{alvaro.gomariz@roche.com}
 \orcid{0000-0002-6172-5190}
 \linkedin{alvarogomariz}
@@ -79,10 +81,16 @@
 
 % \position{Bioimage Analysis Researcher}
 % \position{Computer Vi{\enskip\cdotp\enskip}Security Expert} % Your expertise/fields
+
+
+% \quote{
+% My passion is to build tools that enable a data-based understanding of life, for which I investigate synergies between machine learning, computer vision, and life sciences. 
+% While I have focused on research in my 6 years of experience, I have also engaged in product management and development with the aim of making a positive impact in the world. 
+% } % A quote or statement
+
 \quote{
-My passion is to build tools that enable a data-based understanding of life, for which I investigate synergies between machine learning, computer vision, and life sciences. 
-While I have focused on research in my 6 years of experience, I have also engaged in product management and development with the aim of making a positive impact in the world. 
-} % A quote or statement
+Strategic machine learning (ML) leader with over 10 years of experience applying ML to solve complex clinical problems, including 5+ years in the pharmaceutical industry and 4+ years in technical leadership roles. I have led teams of 10+ scientists to deliver production-level ML software within highly regulated settings. I specialise in driving cross-disciplinary projects across diverse disease areas to translate cutting-edge research into scalable, high-impact AI solutions.
+}
 
 \makecvfooter{\today}{Alvaro Gomariz~~~·~~~Résumé}{\thepage} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
 
@@ -97,13 +105,25 @@ While I have focused on research in my 6 years of experience, I have also engage
 %	Each section is imported separately, open each file in turn to modify content
 %----------------------------------------------------------------------------------------
 
-\input{cv-sections/education.tex}
 \input{cv-sections/experience.tex}
-% \newpage
-\input{cv-sections/honors.tex}
+\pagebreak
+\input{cv-sections/education.tex}
 \input{cv-sections/skills.tex}
-\input{cv-sections/extracurricular.tex}
+% \input{cv-sections/extracurricular.tex}
+
+% \input{cv-sections/honors.tex}
+
+% \pagebreak
+% \begin{center}
+%   \textit{ \Large{\textbf{Additional information}}}
+% \end{center}
+% \bigskip
+
 % \input{cv-sections/publications.tex}
+
+% \includepdf[pages=-]{cv_additional.pdf}
+
+
 % \input{cv-sections/student_supervision.tex}
 % \input{cv-sections/references.tex}
 

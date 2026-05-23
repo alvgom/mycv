@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awesome Cover Letter
+% XeLaTeX Template
+% Version 1.1 (9/1/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Claud D. Park (posquit0.bj@gmail.com)
+% Lars Richter (mail@ayeks.de)
+% With modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template must be compiled with XeLaTeX, the below lines will ensure this
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt, letter]{ag-cv} % A4 paper size by default, use 'letterpaper' for US letter
+
+\geometry{left=2cm, top=1.3cm, right=2cm, bottom=1.9cm, footskip=.5cm} % Configure page margins with geometry
+ 
+\fontdir[fonts/] % Specify the location of the included fonts
+\usepackage{ragged2e}
+
+% Color for highlights
+\definecolor{awesome}{HTML}{1c85c7} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
+%\definecolor{awesome}{HTML}{CA63A8} % Uncomment if you would like to specify your own color
+
+% Colors for text - uncomment and modify
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%----------------------------------------------------------------------------------------
+
+
+
+\name{}{Alvaro Gomariz}
+\address{Imfeldstrasse 103, 
+CH-8037 Zürich}
+% \mobile{(+82) 10-9030-1843}
+
+\email{alvarogomarizc@gmail.com}
+\orcid{0000-0002-6172-5190}
+% \github{https://github.com/alvgom}
+\linkedin{alvarogomariz}
+\gscholar{https://scholar.google.com/citations?hl=en&user=v4JtSZcAAAAJ}
+
+
+% \position{Software Engineer{\enskip\cdotp\enskip}Security Expert} % Your expertise/fields
+% \quote{``Make the change that you want to see in the world."} % A quote or statement
+
+%----------------------------------------------------------------------------------------
+%	RECIPIENT/POSITION/LETTER INFORMATION
+%	All of the below lines must be filled out
+%----------------------------------------------------------------------------------------
+
+% \recipient{}{Roche} % The company being applied to
+
+\letterdate{Zurich, 28th February 2025} % The date on the letter, default is the date of compilation
+
+\lettertitle{Application for Research Scientist position} % The title of the letter
+
+\letteropening{Dear Hiring Team,} % How the letter is opened
+
+\letterclosing{Best regards,} % How the letter is closed
+
+% \letterenclosure[Attached]{Curriculum Vitae} % Any enclosures with the letter
+
+% \makecvfooter{\today}{Alvaro Gomariz~~~·~~~Cover Letter}{} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
+  
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvheader % Print the header
+
+\makelettertitlenorec % Print the title
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\begin{cvletter}
+
+%------------------------------------------------
+
+% \lettersection{About Me}
+
+
+
+
+% \lettersection{Why Me?}
+\begin{flushleft}
+I am excited to apply for this position at DeepMind. With a PhD in Computer Vision from ETH Zurich and over four additional years of experience developing AI products in the pharmaceutical industry, I bring a combination of technical expertise, a strong research background, and proven experience in deploying AI-driven medical imaging solutions at scale. 
+
+In my current role at Roche, a global leader in the pharmaceutical industry, I have led innovative research and development of machine learning applications for healthcare that integrate diverse data modalities while maintaining rigorous safety and evaluation standards. Highlights include leading the creation of a company-wide vision foundation model for digital pathology, designing an AI assistant that accelerates clinical trials by analyzing colonoscopy videos, and creating a novel unsupervised domain adaptation model in ophthalmology to extend the use of existing products to new medical devices. I have also actively driven more effective outcomes for our projects by implementing cross-functional matrix teams and integrating best practices in software engineering in our group.
+
+The opportunity to advance foundational multimodal research at Google DeepMind, particularly at the intersection of vision, language, and healthcare data, strongly aligns with my expertise and ambitions. My experience in deep learning, large-scale model evaluation, and medical imaging uniquely positions me to contribute to the development of next-generation multimodal AI systems tailored for complex healthcare challenges. Having worked at the forefront of machine learning applications in the pharmaceutical industry, I understand both the technical and regulatory intricacies involved in building robust, real-world medical AI solutions.
+
+Google DeepMind’s commitment to scientific advancement and ethical AI resonates deeply with me. I am eager to bring my research expertise, technical skills, and industry experience to push the boundaries of multimodal AI in healthcare. I look forward to the opportunity to contribute to your groundbreaking work.
+
+\end{flushleft}
+
+\end{cvletter}
+
+%----------------------------------------------------------------------------------------
+
+\makeletterclosing % Print the signature and enclosures
+
+\end{document}

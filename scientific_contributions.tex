@@ -17,13 +17,13 @@
 % \documentclass[11pt, a4paper]{ag-cv} % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[12pt, a4paper]{ag-cv} % A4 paper size by default, use 'letterpaper' for US letter
 
-
 \newcommand{\cvtype}{long} % short or long
 \newcommand{\awardsmoney}{no} % yes or no
 \newcommand{\showsupervisors}{no} % yes or no
 \newcommand{\authornames}{long} % short or long
 \newcommand{\publicationstype}{long} % short or long
 
+\setcounter{page}{3}
 
 % \ifthenelse{\equal{\cvtype}{short}}
 %     { %short
@@ -61,18 +61,19 @@
 %	Comment any of the lines below if they are not required
 %----------------------------------------------------------------------------------------
  
-\name{}{Supplementary Information}
+% \name{}{Supplementary Information}
+\name{}{Additional Information}
 % \address{Computer Vision Laboratory, ETF C110, 
 % Sternwartstrasse 7, 
 % CH-8092 Zürich}
 % \mobile{(+82) 10-9030-1843}
 
 % \mobile{(+82) 10-9030-1843}
-\email{alvaro.gomariz@roche.com}
-\orcid{0000-0002-6172-5190}
-\linkedin{alvarogomariz}
-\gscholar{https://scholar.google.com/citations?hl=en&user=v4JtSZcAAAAJ}
-\mobile{ +41 (0)76 773 14 72}
+% \email{alvaro.gomariz@roche.com}
+% \orcid{0000-0002-6172-5190}
+% \linkedin{alvarogomariz}
+% \gscholar{https://scholar.google.com/citations?hl=en&user=v4JtSZcAAAAJ}
+% \mobile{ +41 (0)76 773 14 72}
 
 %\skype{skypeid}
 %\stackoverflow{SOid}{SOname}
@@ -90,13 +91,13 @@
 % \quote{I am a final year PhD student working on machine learning research for biomedical image analysis. I also work as a consultant managing R\&D projects on the frontier between computer vision and biology.
 % My passion is to bring these fields closer by understanding the needs in both communities as well as the solutions they offer, and by designing data-driven methodologies that allow for an easier interface between them. } % A quote or statement
 
-\makecvfooter{\today}{Alvaro Gomariz~~~·~~~Scientific Contributions}{\thepage} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
+\makecvfooter{\today}{Alvaro Gomariz~~~·~~~Additional Information}{\thepage} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\makecvheader % Print the header
+% \makecvheader % Print the header
 
 %----------------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
@@ -105,7 +106,10 @@
 
 \vspace{0.25cm}
 \input{cv-sections/publications.tex}
-\input{cv-sections/student_supervision.tex}
+% \input{cv-sections/student_supervision.tex}
+% \newpage
+% \input{cv-sections/honors.tex}
+
 
 
 
