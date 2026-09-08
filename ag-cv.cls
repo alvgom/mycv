@@ -787,6 +787,7 @@
 }{%
   \end{itemize}
   \end{justify}
+  \par\strut
   \vspace{-4.0mm}
 }
 
