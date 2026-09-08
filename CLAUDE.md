@@ -96,9 +96,9 @@ the CV for different applications. They are NOT dead code.
 Commented-out variants are labelled with greppable marker comments so each
 block is self-describing. List every marker with:
 
-    grep -rn "VARIANT\|OPTIONAL\|ALT-ITEM" cv-sections/
+    grep -rn "VARIANT\|OPTIONAL\|ALT-ITEM\|NOTES" cv-sections/
 
-Three tokens (all plain LaTeX comments — they never affect output):
+Four tokens (all plain LaTeX comments — they never affect output):
 
 - `% VARIANT <slug> — <description>  [ACTIVE|INACTIVE]`
   One alternative of an entry. Exactly one variant in a group is `[ACTIVE]`
@@ -108,10 +108,41 @@ Three tokens (all plain LaTeX comments — they never affect output):
   A standalone block that can be toggled on/off independently.
 - `% ALT-ITEM — <description>`
   Alternate `\item` bullet(s) for the surrounding (active) entry.
+- `% NOTES <slug> — <what this is about>` … `% END NOTES <slug>`
+  A free-form, unpolished brain-dump attached to a specific entry (see
+  "Tailoring notes" below).
 
 When adding or editing variants, keep the marker and its `[STATE]` accurate.
 When switching which variant is active, update the `[STATE]` fields so exactly
 one variant per group remains `[ACTIVE]`.
+
+### Tailoring notes (`NOTES` blocks)
+
+A `NOTES` block is raw source material I attach to an entry — quick, unpolished
+thoughts, extra facts, context, or hints about what to emphasise for certain
+applications. Format (every line a LaTeX comment, so it never renders):
+
+    % NOTES roche-lead — raw material for the current Roche role
+    % led the colonoscopy thing end to end, ~10 people
+    % for research-heavy roles stress the foundation-model / DINOv2 work
+    % for leadership roles stress cross-functional + stakeholder alignment
+    % patent filed 2024 (check exact number before using)
+    % END NOTES <slug>
+
+How to use these blocks when I ask you to write or tailor a section — either
+from explicit instructions or to match a specific job/position:
+
+- Treat `NOTES` as a **pool of source facts and guidance**, not as text to
+  insert. Never paste note text verbatim; rephrase into the CV's concise,
+  technical style.
+- Select only what is **relevant** to the request or target role; ignore the
+  rest. Different applications will draw on different lines from the same block.
+- The normal factual constraints still apply. Notes count as information I
+  have provided, so you may use facts stated there — but do not extrapolate
+  beyond them, and if a note is vague, flags uncertainty ("check…"), or would
+  need a number I have not given, ask rather than invent.
+- Notes are working scratch space: never delete or rewrite them unless I ask,
+  and do not "promote" a note into a visible bullet without my go-ahead.
 
 ## Compilation
 
