@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awesome Cover Letter
+% XeLaTeX Template
+% Version 1.1 (9/1/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Claud D. Park (posquit0.bj@gmail.com)
+% Lars Richter (mail@ayeks.de)
+% With modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template must be compiled with XeLaTeX, the below lines will ensure this
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt, letter]{ag-cv} % A4 paper size by default, use 'letterpaper' for US letter
+
+\geometry{left=2cm, top=1.3cm, right=2cm, bottom=1.9cm, footskip=.5cm} % Configure page margins with geometry
+
+\fontdir[fonts/] % Specify the location of the included fonts
+\usepackage{ragged2e}
+
+% Color for highlights
+\definecolor{awesome}{HTML}{1c85c7} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%----------------------------------------------------------------------------------------
+
+\name{}{Alvaro Gomariz}
+\address{Imfeldstrasse 103,
+CH-8037 Z\"urich}
+
+\email{alvaro.gomariz@roche.com}
+\orcid{0000-0002-6172-5190}
+\linkedin{alvarogomariz}
+\gscholar{https://scholar.google.com/citations?hl=en&user=v4JtSZcAAAAJ}
+\mobile{ +41 (0)76 773 14 72}
+
+%----------------------------------------------------------------------------------------
+%	RECIPIENT/POSITION/LETTER INFORMATION
+%----------------------------------------------------------------------------------------
+
+% \recipient{}{Roche} % Generic opening — no recipient block (see \makelettertitlenorec)
+
+\letterdate{Basel, 8th September 2026}
+
+\lettertitle{Application for Senior Computational \& Applied AI Scientist (Req. 202608-121873)}
+
+\letteropening{Dear Hiring Team,}
+
+\letterclosing{Yours sincerely,}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvheader % Print the header
+
+\makelettertitlenorec % Print the title
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\begin{cvletter}
+
+%------------------------------------------------
+
+\begin{flushleft}
+
+I am excited to apply for this role because it brings me back to the group where I began my Roche career as a postdoc over five years ago, now evolved into Imaging Data Insights. It is also where I could best apply what I learned afterwards in product development: turning ML models into robust, reproducible software, and into evidence that can support decisions in late-stage trials.
+
+My work at Roche has spanned ophthalmology, oncology, and inflammatory bowel disease (IBD). I began by building tools and exploring what was possible, from unsupervised domain adaptation for ophthalmic OCT to foundation models for digital pathology, in close collaboration with the teams that would use them. More recently, leading our AI work in IBD was a different kind of challenge, and it is where much of what I had learned came together. Across these projects, the common thread has been extracting quantitative information from images and connecting it to biological and clinical questions.
+
+In the IBD work, combining imaging with clinical data was key to the model's prognostic power. More than that, I learned to design ML work so that its value can grow with the molecule: planning the data strategy and benchmarking upfront, and weighing development, regulatory, and productization costs against likely value, so that the resulting evidence informs early decisions and remains useful as a program advances. I believe that discipline is just as valuable in early research as in late-stage development. It starts with defining the right scientific problem, in close partnership with clinical and disease-area experts, which is a large part of what draws me back to this area and to the CoE.
+
+I also care about how this work is delivered: careful validation and benchmarking, sound software engineering, and workflows and documentation that others can reproduce, maintain, and reuse. I am interested in how newer AI tooling, including foundation models and agentic approaches, can make scientific analysis and software development faster without compromising those standards. In the projects I lead, I focus on setting technical direction, aligning stakeholders across functions, and building capability in the team.
+
+I would welcome the opportunity to bring this combination of imaging science, multimodal AI, product-development experience, and cross-functional leadership to the Imaging Data Insights team. Thank you for considering my application.
+
+\end{flushleft}
+
+\end{cvletter}
+
+%----------------------------------------------------------------------------------------
+
+\makeletterclosing % Print the signature and enclosures
+
+\end{document}

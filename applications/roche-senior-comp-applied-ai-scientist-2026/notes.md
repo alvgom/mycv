@@ -188,6 +188,32 @@ generative models from scratch.
   Strong hits on "multimodal data integration," "RWD," and cross-functional
   partnership with biostatistics.
 
+### §6 Leadership scope & style + sharper facts (from principal-scientist letter, 2026-09)
+Source: an internal cover letter Alvaro used applying for Principal AI/ML Data
+Scientist in his own group. Learnings to reuse (all Alvaro's own words/claims):
+- **One-line unifier:** "technical expert in multimodal ML, with experience
+  across ophthalmology, oncology, and IBD." Ties the whole career together;
+  candidate line for CV quote and/or cover letter.
+- **What "multimodal" means for him:** methods for **imaging and unstructured
+  clinical data** (use this precision instead of bare "multimodal").
+- **Leadership style (for principal-level signalling):** leads through
+  **technical authority + cross-functional alignment + capability building**,
+  not line management — maps onto the JD's "influence without formal authority"
+  and "mentor." Scope already spans strategy/roadmap, clinical-trial impact,
+  methodology, data/annotation, external partnerships, and community =
+  principal-level breadth.
+- **Sharper facts to reconcile with the CV:**
+  - Contract engineers: letter says **4** (CV currently "2–4"). **[CONFIRM]**
+  - **Virgo:** "evaluation agreement for use of their foundation model in our
+    main use case" (CV currently says "image-analysis evaluation and a potential
+    multi-sponsor consortium"). **[CONFIRM which is current/accurate]**
+  - **Scribe:** contract **plus ongoing assessment for other projects**.
+  - "5 renowned academic experts" = **KOLs**; gastroenterologists = GI doctors.
+  - Foundation-model development + **patent application** already reflected.
+- **DECISION pending:** whether to reintroduce a light leadership/style note in
+  the CoE letter (Alvaro earlier cut leadership as "too much"; but it supports
+  the principal-level aim). Keep CV leadership bullets as the main vehicle.
+
 ---
 
 ## Strategy decisions
@@ -220,6 +246,29 @@ generative models from scratch.
 - Lead the story with **rigorous evaluation + multimodal + foundation models +
   clinical decision impact (IBD)**; use ophthalmology/ultrasound/MRI as
   breadth evidence. The **cover letter** is the place to connect these dots.
+
+### Cover-letter narrative arc (Alvaro's idea, 2026-09)
+Three-act "insider returning to early research" story:
+1. **Early research** — Alvaro's Roche **postdoc (Mar 2021–Jul 2022) was in
+   pRED Informatics**, working on ophthalmic OCT. That organization is related
+   to (has since been reorganized/transformed toward) today's **Computational
+   Sciences CoE** — "not exactly the same, but I know the group well."
+   **[CONFIRM lineage wording; don't overstate "predecessor" if not literally
+   true — safe framing: "what was then pRED Informatics" + "I know this world
+   from the inside".]**
+2. **Product development** — moved to the applied side; learned what it takes to
+   advance ML into **external-facing software** and into **evidence robust
+   enough for late-stage clinical trials**. Supporting CV facts: AMETRINE-1/2
+   Ph3 covariate work; Scribe/Virgo partnerships; MLOps; digital-pathology
+   software package; OCT analysis software (Momaku, ROSA).
+3. **Return to early research** — bring that delivery/clinical rigor back
+   upstream. Candidate "why/where" angles: (a) leverage — where computational
+   science most shapes the portfolio, before programs reach the clinic;
+   (b) bridge — pair early-research creativity with product-grade delivery
+   discipline; (c) de-risk — reusable, rigorously evaluated imaging/multimodal
+   AI that de-risks decisions early; (d) evidence — turn complex imaging into
+   decision-ready evidence that shapes program design/prioritization.
+   **[DECISION pending: which angle(s).]**
 
 ---
 
