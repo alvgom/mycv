@@ -1,0 +1,36 @@
+{
+  // This project MUST be built with XeLaTeX (fontspec, unicode-math, custom
+  // OTF/TTF fonts in fonts/). pdfLaTeX fails. See CLAUDE.md > Compilation.
+  //
+  // GUI-launched VS Code does not inherit the shell PATH, so TeX Live's bin
+  // (/Library/TeX/texbin) is missing and the build fails with
+  // "spawn xelatex ENOENT". Fix: call latexmk by ABSOLUTE path and give it an
+  // absolute PATH so it can find xelatex/xetex when it runs them.
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk (xelatex)",
+      "command": "/Library/TeX/texbin/latexmk",
+      "args": [
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {
+        "PATH": "/Library/TeX/texbin:/usr/bin:/bin:/usr/local/bin:/opt/homebrew/bin"
+      }
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (xelatex)",
+      "tools": ["latexmk (xelatex)"]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+  // Always use the recipe above; ignore the %!TEX magic program comment so the
+  // absolute command + PATH fix is guaranteed to apply.
+  "latex-workshop.latex.build.forceRecipeUsage": true,
+  "latex-workshop.latex.autoBuild.run": "onFileChange"
+}
