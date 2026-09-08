@@ -31,12 +31,39 @@ accuracy and the existing visual quality.
 
 ## CV length
 
-- The target CV length is 2 pages.
-- After substantial edits, compile the CV and check that the page count
-  remains within the target.
+- There is no fixed page limit. Two pages is a loose preference for the core
+  CV, but supplementary information may legitimately extend it.
+- After substantial edits, compile the CV and report the resulting page count
+  so I can decide whether it is acceptable.
 - Prefer improving wording or removing low-value content before reducing
   font size, margins, or whitespace.
 - Do not silently alter typography to make content fit.
+
+## Project structure
+
+- `cv.tex` — primary CV; assembles content from `cv-sections/*.tex` via
+  `\input`.
+- `scientific_contributions.tex` — standalone supplement ("Additional
+  Information"), reuses `cv-sections/publications.tex`.
+- `cover_letters/*.tex` — standalone, per-employer cover letters using the
+  same class.
+- `ag-cv.cls` — the active document class (a customized fork of Awesome-CV).
+  Note it still self-identifies internally as `awesome-cv`, which produces a
+  harmless class-name warning at build time.
+- `awesome-cv.cls` — the upstream original, kept for reference only. Not used
+  by `cv.tex`. Do not edit it to change CV output.
+- `fonts/`, `portrait.jpeg`, `fontawesome.sty` — assets.
+
+## Content toggles
+
+The top of `cv.tex` sets flags that switch content and formatting across
+sections. Respect the selected values when editing:
+
+- `\cvtype{long|short}`
+- `\awardsmoney{yes|no}`
+- `\showsupervisors{yes|no}`
+- `\authornames{long|short}`
+- `\publicationstype{long|short}`
 
 ## LaTeX
 
@@ -46,15 +73,65 @@ accuracy and the existing visual quality.
 - Do not introduce unnecessary packages.
 - Do not replace working macros simply because another implementation is
   possible.
-- Preserve comments that contain useful authoring information.
+- Key custom macros/environments (defined in `ag-cv.cls`): `cventries` /
+  `\cventry` / `\cventryag`, `cvitems`, `cvsubentries` / `\cvsubentry`,
+  `cvpublications` / `\cvpublication` / `\cvpreprint` / `\cvtalk`,
+  `cvskills` / `\cvskill`, `cvhonors` / `\cvhonor`. Reuse these rather than
+  hand-rolling layout.
+- Preserve comments that contain useful authoring information (see the note
+  on commented-out variant content below).
+
+## Commented-out variant content
+
+Section files intentionally contain large amounts of commented-out content.
+These are alternate phrasings and variants I switch between when tailoring
+the CV for different applications. They are NOT dead code.
+
+- Do not delete or "clean up" commented-out content unless I explicitly ask.
+- When editing, do not assume the uncommented version is the only relevant
+  one; ask if it is unclear which variant is current.
+
+### Marker convention
+
+Commented-out variants are labelled with greppable marker comments so each
+block is self-describing. List every marker with:
+
+    grep -rn "VARIANT\|OPTIONAL\|ALT-ITEM" cv-sections/
+
+Three tokens (all plain LaTeX comments — they never affect output):
+
+- `% VARIANT <slug> — <description>  [ACTIVE|INACTIVE]`
+  One alternative of an entry. Exactly one variant in a group is `[ACTIVE]`
+  (uncommented); the rest are `[INACTIVE]` (commented). A group may be
+  introduced by a `% VARIANT GROUP: <name>` header explaining the choice.
+- `% OPTIONAL <slug> — <description>  [ON|OFF]`
+  A standalone block that can be toggled on/off independently.
+- `% ALT-ITEM — <description>`
+  Alternate `\item` bullet(s) for the surrounding (active) entry.
+
+When adding or editing variants, keep the marker and its `[STATE]` accurate.
+When switching which variant is active, update the `[STATE]` fields so exactly
+one variant per group remains `[ACTIVE]`.
 
 ## Compilation
+
+This project **must** be compiled with XeLaTeX (it uses `fontspec`,
+`unicode-math`, and custom OTF/TTF fonts loaded from `fonts/`). Do not use
+pdfLaTeX; it will fail.
 
 After making substantive changes, compile the CV.
 
 Primary build command:
 
-    latexmk -pdf cv.tex
+    latexmk -xelatex cv.tex
+
+The supplement compiles the same way:
+
+    latexmk -xelatex scientific_contributions.tex
+
+Note on environment: the CV is normally authored on Overleaf. A local build
+requires a full TeX Live (not BasicTeX); the class depends on `enumitem`,
+`tcolorbox`, `sourcesanspro`, and `xifthen`, which BasicTeX does not ship.
 
 If compilation fails:
 

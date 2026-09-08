@@ -174,7 +174,10 @@
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
-\newfontfamily\FA[Path=\@fontdir]{FontAwesome}
+% \FA is first defined by fontawesome.sty (loaded above); redefine it here to
+% point at the bundled font. Use \renewfontfamily because newer fontspec makes
+% \newfontfamily error on an already-defined command.
+\renewfontfamily\FA[Path=\@fontdir]{FontAwesome}
 % Set font for header (default is Roboto)
 \newfontfamily\headerfont[
   Path=\@fontdir,
