@@ -99,12 +99,26 @@ Alvaro's actual experience (CONFIRMED; his own words, to be rephrased for CV):
   the MCP lets anyone query the data directly and even learn SQL. **Directly
   tied to the IBD AI project** (that project's data lives in Athena). Strong
   concrete example of agentic infrastructure that unblocked a whole team.
-- **Hackathon (company gig):** built a **LangChain agent for supplier
-  ISO-certification verification** — gathers supplier info from the internet,
-  verifies whether certification criteria are met, and returns links to the
-  supporting sources (autonomous retrieval + tool use + verification +
-  citations). **DECISION: include as a side bullet under the current Roche
-  position** (framed as a company hackathon), not a headline.
+- **Hackathon — "Supplier Intelligence"** (Roche × Microsoft Azure AI
+  Hackathon, Nov 2024; team of 4: Prajit Kadavil, Mathieu Cayssol, Alvaro
+  Gomariz, Anil Yuce). Accurate details from the project deck
+  (`Supplier Intelligence.pdf`):
+  - Automates supplier due-diligence for a Global Category Manager (Biologics
+    & Chemicals): builds a matrix of suppliers with **ISO certifications
+    (9001, 13485, 14001)** and **sustainability rankings (EcoVadis, MSCI ESG,
+    CDP, Sustainalytics)**, returning **structured JSON output with source
+    URLs**.
+  - **Stack:** Google search to locate company sites / certification PDFs +
+    custom LLM pipelines (**ScrapeGraphAI**) + **GPT-4** to standardize
+    extracted content; **Streamlit** UI **deployed on Azure**; code on GitLab.
+    Learnings noted: multiple websites beat one; RAG didn't help much.
+  - **Concrete value:** replaces a manual search that currently takes **~1 hour
+    per supplier**; scalable via parallel backend (no supplier-count limit).
+  - **Tooling note:** deck emphasizes ScrapeGraphAI/GPT-4; Alvaro earlier said
+    LangChain. **[CONFIRM which to name in the CV]** — skills.tex currently
+    lists LangChain.
+  - **DECISION: include as a side bullet under the current Roche position**
+    (framed as a side project / hackathon), not a headline.
 
 Takeaway: the GenAI "gap" is really a *surfacing* problem, not a real gap.
 Reframe as "Generative & Agentic AI: LLM agents (API), LangChain, MCP, RAG;
@@ -209,36 +223,48 @@ generative models from scratch.
 
 ---
 
-## Planned changes (to execute later, after review)
+## Executed changes (2026-09-08)
+
+Baseline before edits: **5 pages**. After edits: **5 pages** (no growth). CV and
+cover letter both compile cleanly with XeLaTeX. One pre-existing 15pt overfull in
+the experience table alignment (title/date columns) — not caused by these edits;
+left untouched per CLAUDE.md typography rule.
+
+**Findings that changed the earlier list:**
+- The research-oriented `\quote` was **already active** (not the leadership one).
+  So no swap — replaced it with a fresh role-tailored quote instead (below).
+- **MRI/ultrasound/micro-CT already listed** in the doctoral "imaging domains"
+  bullet — no new MRI bullet needed; breadth surfaced in the cover letter.
+- User **removed the duplicate Data-scientist entry** themselves.
 
 CV:
-- [ ] `cv.tex`: activate research-oriented `\quote` variant.
-- [ ] `skills.tex`: add **Generative & Agentic AI** line (LLM APIs, LangChain,
-      MCP, RAG; AI-assisted dev with Claude Code / Cursor / Copilot);
-      add **3D Slicer, Fiji, Napari** to imaging tools.
-- [ ] `experience.tex` (current Roche entry): surface
-      (a) **MCP/Athena** agentic infrastructure (democratised data access, tied
-          to IBD project),
-      (b) **multimodal clinical+imaging IBD prognostic model** evaluated for
-          Ph3 (AMETRINE) covariate adjustment in the SAP, beating clinical
-          baseline (qualitative; numbers held for interview),
-      (c) **RWD (Paris IBD center) ingestion/curation** + **historical-trial
-          data harmonisation with biostatistics**,
-      (d) **side bullet: LangChain hackathon agent** (supplier ISO-cert
-          verification).
-- [ ] `experience.tex` (doctoral entry): add **MRI** in the missing-modalities /
-      attention-mechanism context (no paper — describe as project work).
-- [ ] Reuse/adjust existing VARIANT blocks where possible; keep leadership scope
-      visible (supports the principal-level ask).
+- [x] `cv.tex`: replaced active `\quote` with role-tailored text (dropped
+      "foundation models"; GenAI framed as *applied*, not core). Old research +
+      leadership quotes preserved as commented VARIANTs.
+- [x] `skills.tex`: added **Generative & Agentic AI** line; added dedicated
+      **Imaging tools** line (3D Slicer, Fiji, Napari, ITK, OpenCV; ITK/OpenCV
+      moved out of Frameworks).
+- [x] `experience.tex` (Senior DS): rewrote to 7 bullets — colonoscopy objective
+      (prognostic AI covariate + reusable assets); multimodal Ph3 covariate
+      (qualitative, no numbers); annotation campaign + scoring/detection at
+      inter-rater agreement; RWD (Paris) + trial harmonisation + MCP/agentic
+      (merged); tightened Scribe/Virgo; softened DP adoption ("two teams");
+      DS network. + **OPTIONAL hackathon-iso** bullet [ON] (LangChain agent).
+- [x] `experience.tex` (Postdoc): 3 clumsy bullets → 2 (OCT methods; prototyped/
+      informed features, 3 devices + RWD, informed later FM work).
+- [x] `experience.tex` (Data scientist Aug 2022): reworded bullet 5.
+- [x] `experience.tex` (doctoral): "missing modalities" → "learning with missing
+      modalities".
+- [x] `publications.tex`: typo "Ibañez v" → "Ibañez V".
 
-Cover letter (new, e.g. `cover_letters/letter_RocheCSCoE.tex`):
-- [ ] Connect: clinical imaging biomarkers + **modality breadth (OCT/US/MRI/
-      micro-CT)** + rigorous eval/uncertainty + multimodal (clinical+imaging) +
-      foundation/agentic AI + cross-functional partnerships (biostats, clinical).
-- [ ] Note the recent **Medical Image Analysis 2025** ophthalmology paper as
-      breadth evidence (not as current focus).
-- [ ] **Demonstrate** principal-level scope; do **not** state the grade ask in
-      writing — raise it with recruiter/HM in conversation.
+Cover letter:
+- [x] Created `cover_letters/letter_RocheCSCoE.tex` (1 page). Generic opening;
+      connects imaging biomarkers + modality breadth (OCT/US/MRI/micro-CT) +
+      rigorous eval/uncertainty + multimodal IBD prognostic work + MCP/agentic +
+      partnerships; cites MedIA 2025 as breadth; demonstrates principal-level
+      scope without stating a grade ask.
+      **TODO before sending:** verify postal address (placeholder from prior
+      letter); confirm date; decide on hackathon-iso bullet in the CV.
 
 ## Resolved (was: open questions)
 1. **AI coding tools:** Claude Code, Cursor, GitHub Copilot (extensive, current
