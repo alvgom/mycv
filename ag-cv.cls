@@ -178,6 +178,13 @@
 % point at the bundled font. Use \renewfontfamily because newer fontspec makes
 % \newfontfamily error on an already-defined command.
 \renewfontfamily\FA[Path=\@fontdir]{FontAwesome}
+% Set the Academicons font to load from the bundled file.
+% \ai@font is first defined by academicons.sty (loaded above) via a by-name
+% lookup ({academicons}, no Path). On macOS that name lookup can resolve to a
+% Core Text substitute font that lacks the icon glyphs, producing "Missing
+% character" errors for \aiOrcidSquare, \aiGoogleScholar, etc. Redefine it to
+% point at the bundled font so the build is reproducible (same fix as \FA).
+\renewfontfamily\ai@font[Path=\@fontdir]{academicons}
 % Set font for header (default is Roboto)
 \newfontfamily\headerfont[
   Path=\@fontdir,
