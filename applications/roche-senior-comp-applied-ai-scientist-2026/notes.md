@@ -312,8 +312,8 @@ Cover letter:
       rigorous eval/uncertainty + multimodal IBD prognostic work + MCP/agentic +
       partnerships; cites MedIA 2025 as breadth; demonstrates principal-level
       scope without stating a grade ask.
-      **TODO before sending:** verify postal address (placeholder from prior
-      letter); confirm date; decide on hackathon-iso bullet in the CV.
+      (See "Finalization pass (2026-09-09)" below for the final letter state —
+      address, date, tone, and content all resolved.)
 
 ## Resolved (was: open questions)
 1. **AI coding tools:** Claude Code, Cursor, GitHub Copilot (extensive, current
@@ -329,5 +329,30 @@ Cover letter:
 6. **Level ask:** demonstrate principal scope in materials; negotiate grade in
    conversation (not in the letter).
 
+## Finalization pass (2026-09-09)
+
+Iterated live with Alvaro. Final state of all three documents:
+
+**Page counts (all compile clean, XeLaTeX):** `cv.pdf` 5 pp · `scientific_contributions.pdf` 3 pp · `cover_letters/letter_RocheCSCoE.pdf` 1 pp. (CV/supplement grew a page from the added abstracts; core CV still ~2 pp, rest is publications.)
+
+**Cover letter — finalized (`letter_RocheCSCoE.tex`):**
+- Address set to **Imfeldstrasse 103, CH-8037 Zürich**; date **9th September 2026**; generic opening ("Dear Hiring Team").
+- Rewritten for a natural, non-corporate tone; **imaging-scientist identity** made explicit ("the common thread has been extracting quantitative information from images and connecting it to biological and clinical questions").
+- Opening: role sits in early research (where he started, "now evolved into Imaging Data Insights" — **lineage kept as-written per Alvaro**) + applies product-development experience.
+- Lessons framed as personal conviction (multimodal; plan so evidence "grows with the molecule"; regulatory/productization vs value); GenAI reframed to senior "newer AI tooling, including foundation models and agentic approaches… without compromising [reproducibility]".
+- One concise leadership line (technical direction + cross-functional alignment + capability building); closes on the "imaging science + multimodal AI + product-dev + cross-functional leadership" combination.
+- Nature/Science/MedIA citations removed from the letter (kept in CV); no em-dashes.
+
+**CV — additional edits this pass:**
+- Quote: role-tailored, modest, no "foundation models"/superlatives (final wording in `cv.tex`).
+- `experience.tex` Senior DS: added **reusable assets** clause (bullet 1); **mentoring** line ("seven interns across my Roche roles"); dissemination bullet says **"seven conference abstracts as first or last author"** (= the IBD-specific count; **kept bare per Alvaro**, though the full conference list totals 10 incl. 3 digital-pathology); bullet 6 reworded "Earlier in this role (through March 2024)"; hackathon = "Side project: Built an LLM agent (ScrapeGraphAI, LangChain, RAG)…".
+- `skills.tex`: **Generative & Agentic AI** line (RAG removed — scoped to the hackathon bullet instead); dedicated **Imaging tools** line.
+- `publications.tex`: added **UEG Week 2025 ×2** (UEG Journal Vol 13, Issue S8; no per-abstract DOI — section DOIs .70039/.70035 are index/collection, not usable), **DDW 2026 ×1** (last author), **UEG Week 2026 ×2 (accepted)** (last author); standardized **Gutierrez-Becker** hyphenation; fixed "Ibañez V".
+
+**Open decisions — kept as-is per Alvaro (2026-09-09):**
+- CV bullet 2 keeps **"outperforms the clinical baseline"** (not softened, unlike the letter).
+- Abstract count stays bare **"seven"** (not qualified "on this program", not softened to "multiple").
+
 ## Still open
-- (none blocking) — ready to draft edits when Alvaro says go.
+- **ARVO abstract reformatting** — Alvaro flagged one ARVO/IOVS entry (articleid 2783182) needs correcting, but the page is Cloudflare-blocked; **waiting on pasted citation details** (title/authors/volume/issue/DOI) and which of the 3 ARVO entries it is.
+- Per-abstract DOIs for the two **UEG 2025** entries, if they ever become available (currently none exist — section-level only).
