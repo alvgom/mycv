@@ -15,6 +15,10 @@
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
+        // Route aux clutter (.aux/.log/.fls/.fdb_latexmk/.xdv/.out) into a
+        // build/ subfolder next to each document. The PDF and .synctex.gz stay
+        // beside the source, so the tracked PDFs and the viewer keep working.
+        "-auxdir=build",
         "%DOC%"
       ],
       "env": {
