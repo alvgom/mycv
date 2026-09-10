@@ -26,88 +26,102 @@
 
 % ======================================================================
 % VARIANT GROUP: roche-recent — how the current Roche tenure is presented.
-%   ACTIVE = tech-lead-split-pathology: two functional-title entries
-%     (1) Senior AI/ML Scientist & Technical Lead - AI Video Colonoscopy (May 2024 - Present)
-%     (2) AI/ML Scientist - Digital Pathology & Computational Oncology (Aug 2022 - Apr 2024)
-%   These fold in the old split-tech-lead + technical-lead-foundation-models
-%   drafts and are tailored for the Novartis digital-pathology role (DP given
-%   its own past entry; H&E-only; pathologist collaboration surfaced).
-%   Inactive alternatives (previous Roche-CoE framing) are preserved commented
-%   at the end of this group, each tagged "% VARIANT <slug>  [INACTIVE]".
+%   ACTIVE = split-tech-lead (uncommented entries further below).
+%   Inactive alternatives follow, each tagged "% VARIANT <slug>".
 %   Grep all markers:  grep -rn "VARIANT\|OPTIONAL\|ALT-ITEM\|NOTES" cv-sections/
 % ======================================================================
 
-% VARIANT tech-lead-colonoscopy — current role, functional title  [ACTIVE]
-\entrytitlestylepositions{Senior AI/ML Scientist \& Technical Lead - AI Video Colonoscopy}  & \entrydatestyleagsmall{May 2024 - Present} \\
+% VARIANT senior-ds-oct2023 — single "Senior Data scientist" entry (Oct 2023-Present), long bullet list  [ACTIVE]
+\entrytitlestylepositions{Senior Data scientist}  & \entrydatestyleagsmall{Oct 2023 - Present} \\
 \multicolumn{2}{L{\textwidth}}{\descriptionstyle{
     \begin{cvitems}
-        \item {Lead the technical and scientific direction of the AI video colonoscopy program, guiding a core team of 5 AI/ML scientists and 4 contract engineers across gap analyses, rigorous model evaluation, MLOps architecture, and prioritized algorithm roadmaps, building reusable assets that can carry over to future programs }
-        \item {Partner with biostatistics and clinical science to build a multimodal prognostic model (imaging + clinical data) that outperforms the clinical baseline, to be included in the statistical analysis plan of a Phase 3 trial }
-        \item {Lead an annotation campaign with 5 academic experts and 4 gastroenterologists to benchmark scoring reliability and develop AI for disease-severity scoring and lesion/feature detection that matches inter-rater agreement; implement ETL pipelines and automated QC of annotations }
+        \item {Lead the technical and scientific direction of the AI video colonoscopy program, guiding a core team of 3-5 AI/ML scientists and 2-4 contract engineers across gap analyses, rigorous model evaluation, MLOps architecture, and prioritized algorithm roadmaps, building reusable assets that can carry over to future programs }
+        \item {Partner with biostatistics and clinical science to build a multimodal prognostic model (endoscopy imaging + clinical data) that outperforms the clinical baseline, evaluated for covariate adjustment in the statistical analysis plan of AMETRINE-1 and 2 (Phase 3 IBD trial) }
+        \item {Lead an annotation campaign with 5 academic experts and 4 gastroenterologists to benchmark endoscopic scoring reliability and develop AI for disease-severity scoring and lesion/feature detection that matches inter-rater agreement; implement ETL pipelines and automated QC of annotations }
         \item {Curate and harmonize multimodal patient data (real-world and clinical-trial), and build an MCP interface with LLM agents that lets the team query our relational Athena database without SQL expertise }
-        \item {Co-lead a data science network of 25-35 scientists and mentor interns and junior colleagues (seven interns across my Roche roles); disseminate results through conference abstracts and a patent application }
-        % OPTIONAL hackathon-iso — LLM agent for supplier ISO/sustainability due-diligence (side project, Roche x Microsoft Azure AI hackathon)  [OFF]
-        % \item {Side project: Built a proof-of-concept LLM agent (ScrapeGraphAI, LangChain, RAG) compiling Roche suppliers' ISO and sustainability credentials from public sources with source links, to replace an hour of manual search per supplier }
+        \item {Disseminate results through seven conference abstracts as first or last author and a patent application, and assess partnerships with Scribe (medical annotation, selected for cost and operational efficiency) and Virgo (image-analysis evaluation and a potential multi-sponsor consortium) }
+        \item {Earlier in this role (through March 2024), led a matrix team of 5-10 AI/ML scientists building deep learning capabilities in digital pathology, contributing to a company-wide foundation model initiative and producing an internal software package and three papers as lead author }
+        \item {Co-lead a data science network of 25-35 scientists and mentor interns and junior colleagues (seven interns across my Roche roles), fostering a connected community for knowledge sharing and capability building }
+        % OPTIONAL hackathon-iso — LLM agent for supplier ISO/sustainability due-diligence (side project, Roche x Microsoft Azure AI hackathon)  [ON]
+        \item {Side project: Built a proof-of-concept LLM agent (ScrapeGraphAI, LangChain, RAG) compiling Roche suppliers' ISO and sustainability credentials from public sources with source links, to replace an hour of manual search per supplier }
     \end{cvitems}
 }} \\
 
-% VARIANT tech-lead-digital-pathology — DP + lung-cancer H&E merged, functional title  [ACTIVE]
-\entrytitlestylepositions{AI/ML Scientist - Digital Pathology \& Computational Oncology}  & \entrydatestyleagsmall{Aug 2022 - Apr 2024} \\
+% VARIANT split-tech-lead  [ACTIVE] — recent Roche tenure split into the three entries below [INACTIVE]
+% \entrytitlestylepositions{Technical Lead - AI Video Colonoscopy}  & \entrydatestyleagsmall{May 2024 - Present} \\
+% \multicolumn{2}{L{\textwidth}}{\descriptionstyle{
+%     \begin{cvitems}
+%         \item {Technical and scientific leadership for AI video colonoscopy project, guiding a team of 10 ML scientists and engineers and orchestrating algorithm roadmaps aligned to prioritized use cases across cross-disciplinary stakeholders} 
+%         \item {Design and execute rigorous model evaluation protocols beyond standard accuracy metrics, assessing model robustness, and performing subgroup analyses for clinical reliability }
+%         \item {Lead an annotation campaign with 5 renowned academic experts and 4 gastroenterologists to assess endoscopic scoring reliability and develop a new AI severity score }
+%         \item {Drive global engagement through conferences and internal forums, publishing results and filing a patent application, and establishing collaborations with global leaders in the field }
+%     \end{cvitems}
+% }} \\
+
+
+% VARIANT data-scientist-2022 — single "Data scientist" entry (Aug 2022-Sep 2023)  [ACTIVE]
+\entrytitlestylepositions{Data scientist}  & \entrydatestyleagsmall{Aug 2022 - Sep 2023} \\
 \multicolumn{2}{L{\textwidth}}{\descriptionstyle{
 \begin{cvitems}
-\item {Technically led a matrix team of 5-10 ML scientists driving a company-wide multimodal foundation model initiative on 35M+ H\&E whole-slide images; adapted state-of-the-art self-supervised vision architectures (e.g., DINOv2) with distributed pre-training to deliver a proprietary model, adopted as an internal software package and disseminated in three lead-author papers }
-\item {Built a proof-of-concept for lung cancer patient stratification from H\&E slides targeting signal comparable to routine genetic screening, addressing severe class imbalance and sparse signal in gigapixel images with multiple instance learning, graph neural networks, self-supervised learning, and survival analysis }
-\item {Collaborated closely with pathologists, including the project's clinical lead, to define the clinical setting, interpret whole-slide images, and assess the interpretability of model outputs }
-\item {Architected data-engineering pipelines for gigapixel-scale inputs with robust data versioning, and designed rigorous benchmarking frameworks evaluating internal models against external vendors to guide corporate build-vs-buy decisions }
+\item {Built a proof-of-concept for lung cancer patient stratification from H\&E slides, targeting signal comparable to routine genetic screening }
+\item {Addressed severe class imbalance and sparse signal in gigapixel images through data stratification, benchmarking, and evaluation of ML methodologies }
+\item {Steered and supervised the development of novel ML solutions (multiple instance learning, graph neural networks, self-supervised learning / foundation models, survival analysis) and software development (MLops) } 
+\item {Designed rigorous benchmarking frameworks to evaluate internal models against external vendors, directly guiding corporate build-vs-buy decisions }
+\item {Strengthened the group's technical foundation by identifying reusable ML methodologies across products and organizing matrix teams around them }
 \end{cvitems}
 }}\\
 
 
-\entrytitlestylepositions{Postdoctoral Researcher - Ophthalmic Imaging (OCT)} & \entrydatestyleagsmall{Mar 2021 - Jul 2022} \\
+% VARIANT technical-lead-foundation-models — single "Technical Lead - Foundation Models" entry (May 2023 - Apr 2024)  [INACTIVE]
+% \entrytitlestylepositions{Technical Lead - Foundation Models }  & \entrydatestyleagsmall{May 2023 - Apr 2024} \\
+% \multicolumn{2}{L{\textwidth}}{\descriptionstyle{
+% \begin{cvitems}
+% \item {Technically led a matrix team of 5–10 ML scientists, steering hands-on R\&D for a company-wide multimodal foundation model initiative utilizing 35M+ digital pathology images, and another for colonoscopy videos}
+% \item {Architected custom data engineering pipelines to handle gigapixel-scale inputs, optimizing distributed pre-training with robust data versioning for production}
+% \item {Adapted state-of-the-art vision architectures (e.g., DINOv2) to deliver a proprietary model, resulting in a widely adopted internal software package and 3 lead-author papers}
+% \item {Designed rigorous benchmarking frameworks to evaluate internal models against external vendors, directly guiding corporate build-vs-buy decisions}
+% \item {Co-led an internal data science network of 25–35 experts, driving unified ML research methodologies and advanced engineering capabilities across the group}
+% \end{cvitems}
+% }} \\
+
+% VARIANT tech-lead-colonoscopy — current role, functional title (from Novartis DP tailoring)  [INACTIVE]
+% \entrytitlestylepositions{Senior AI/ML Scientist \& Technical Lead - AI Video Colonoscopy}  & \entrydatestyleagsmall{May 2024 - Present} \\
+% \multicolumn{2}{L{\textwidth}}{\descriptionstyle{
+%     \begin{cvitems}
+%         \item {Lead the technical and scientific direction of the AI video colonoscopy program, guiding a core team of 5 AI/ML scientists and 4 contract engineers across gap analyses, rigorous model evaluation, MLOps architecture, and prioritized algorithm roadmaps, building reusable assets that can carry over to future programs }
+%         \item {Partner with biostatistics and clinical science to build a multimodal prognostic model (imaging + clinical data) that outperforms the clinical baseline, to be included in the statistical analysis plan of a Phase 3 trial }
+%         \item {Lead an annotation campaign with 5 academic experts and 4 gastroenterologists to benchmark scoring reliability and develop AI for disease-severity scoring and lesion/feature detection that matches inter-rater agreement; implement ETL pipelines and automated QC of annotations }
+%         \item {Curate and harmonize multimodal patient data (real-world and clinical-trial), and build an MCP interface with LLM agents that lets the team query our relational Athena database without SQL expertise }
+%         \item {Co-lead a data science network of 25-35 scientists and mentor interns and junior colleagues (seven interns across my Roche roles); disseminate results through conference abstracts and a patent application }
+%     \end{cvitems}
+% }} \\
+
+% VARIANT tech-lead-digital-pathology — DP + lung-cancer H&E merged, functional title (from Novartis DP tailoring)  [INACTIVE]
+% \entrytitlestylepositions{AI/ML Scientist - Digital Pathology \& Computational Oncology}  & \entrydatestyleagsmall{Aug 2022 - Apr 2024} \\
+% \multicolumn{2}{L{\textwidth}}{\descriptionstyle{
+% \begin{cvitems}
+% \item {Technically led a matrix team of 5-10 ML scientists driving a company-wide multimodal foundation model initiative on 35M+ H\&E whole-slide images; adapted state-of-the-art self-supervised vision architectures (e.g., DINOv2) with distributed pre-training to deliver a proprietary model, adopted as an internal software package and disseminated in three lead-author papers }
+% \item {Built a proof-of-concept for lung cancer patient stratification from H\&E slides targeting signal comparable to routine genetic screening, addressing severe class imbalance and sparse signal in gigapixel images with multiple instance learning, graph neural networks, self-supervised learning, and survival analysis }
+% \item {Collaborated closely with pathologists, including the project's clinical lead, to define the clinical setting, interpret whole-slide images, and assess the interpretability of model outputs }
+% \item {Architected data-engineering pipelines for gigapixel-scale inputs with robust data versioning, and designed rigorous benchmarking frameworks evaluating internal models against external vendors to guide corporate build-vs-buy decisions }
+% \end{cvitems}
+% }}\\
+
+
+\entrytitlestylepositions{Postdoctoral researcher} & \entrydatestyleagsmall{Mar 2021 - Jul 2022} \\
 \multicolumn{2}{L{\textwidth}}{\descriptionstyle{
 \begin{cvitems}
 \item {Developed and published methods (semi-supervised learning, contrastive CNNs, unsupervised domain adaptation) improving ophthalmic OCT segmentation across devices, enabling predictions on new devices without additional annotations}
-\item {Prototyped and informed novel methodologies for internal OCT analysis software, extending it to new devices and real-world data, and informing subsequent foundation model efforts}
+\item {Prototyped and informed novel methodologies for internal OCT analysis software (momaku, ROSA), extending it to new devices and real-world data, and informing subsequent foundation model efforts}
 % ALT-ITEM — alternate phrasings for the postdoc bullets above
 % \item {Conducted research to improve ophthalmic image segmentation product, leading to improved predictions and reduction of annotation efforts}
 % \item {Dissemination of research outcomes in Roche internal and external scientific venues (see Supplementary Information) }
 \end{cvitems}
 }}\\
 
-
-% ----------------------------------------------------------------------
-% PRESERVED INACTIVE VARIANTS (previous Roche-CoE / generic framing).
-% Re-enable by uncommenting one coherent set and commenting the ACTIVE pair above.
-% ----------------------------------------------------------------------
-
-% VARIANT senior-ds-oct2023 — single "Senior Data scientist" entry (Oct 2023-Present), long bullet list  [INACTIVE]
-% \entrytitlestylepositions{Senior Data scientist}  & \entrydatestyleagsmall{Oct 2023 - Present} \\
-% \multicolumn{2}{L{\textwidth}}{\descriptionstyle{
-%     \begin{cvitems}
-%         \item {Lead the technical and scientific direction of the AI video colonoscopy program, guiding a core team of 3-5 AI/ML scientists and 2-4 contract engineers across gap analyses, rigorous model evaluation, MLOps architecture, and prioritized algorithm roadmaps, building reusable assets that can carry over to future programs }
-%         \item {Partner with biostatistics and clinical science to build a multimodal prognostic model (endoscopy imaging + clinical data) that outperforms the clinical baseline, evaluated for covariate adjustment in the statistical analysis plan of AMETRINE-1 and 2 (Phase 3 IBD trial) }
-%         \item {Lead an annotation campaign with 5 academic experts and 4 gastroenterologists to benchmark endoscopic scoring reliability and develop AI for disease-severity scoring and lesion/feature detection that matches inter-rater agreement; implement ETL pipelines and automated QC of annotations }
-%         \item {Curate and harmonize multimodal patient data (real-world and clinical-trial), and build an MCP interface with LLM agents that lets the team query our relational Athena database without SQL expertise }
-%         \item {Disseminate results through seven conference abstracts as first or last author and a patent application, and assess partnerships with Scribe (medical annotation, selected for cost and operational efficiency) and Virgo (image-analysis evaluation and a potential multi-sponsor consortium) }
-%         \item {Earlier in this role (through March 2024), led a matrix team of 5-10 AI/ML scientists building deep learning capabilities in digital pathology, contributing to a company-wide foundation model initiative and producing an internal software package and three papers as lead author }
-%         \item {Co-lead a data science network of 25-35 scientists and mentor interns and junior colleagues (seven interns across my Roche roles), fostering a connected community for knowledge sharing and capability building }
-%         \item {Side project: Built a proof-of-concept LLM agent (ScrapeGraphAI, LangChain, RAG) compiling Roche suppliers' ISO and sustainability credentials from public sources with source links, to replace an hour of manual search per supplier }
-%     \end{cvitems}
-% }} \\
-
-% VARIANT data-scientist-2022 — single "Data scientist" entry (Aug 2022-Sep 2023)  [INACTIVE]
-% \entrytitlestylepositions{Data scientist}  & \entrydatestyleagsmall{Aug 2022 - Sep 2023} \\
-% \multicolumn{2}{L{\textwidth}}{\descriptionstyle{
-% \begin{cvitems}
-% \item {Built a proof-of-concept for lung cancer patient stratification from H\&E slides, targeting signal comparable to routine genetic screening }
-% \item {Addressed severe class imbalance and sparse signal in gigapixel images through data stratification, benchmarking, and evaluation of ML methodologies }
-% \item {Steered and supervised the development of novel ML solutions (multiple instance learning, graph neural networks, self-supervised learning / foundation models, survival analysis) and software development (MLops) }
-% \item {Designed rigorous benchmarking frameworks to evaluate internal models against external vendors, directly guiding corporate build-vs-buy decisions }
-% \item {Strengthened the group's technical foundation by identifying reusable ML methodologies across products and organizing matrix teams around them }
-% \end{cvitems}
-% }}\\
-
 \end{tabular*}%
+
+\pagebreak
 
 \vspace{-3.0mm}
 \setlength\tabcolsep{0pt}
@@ -135,7 +149,7 @@
 \entrytitlestylepositions{Doctoral researcher} & \entrydatestyleagsmall{} \\
 \multicolumn{2}{L{\textwidth}}{\descriptionstyle{
 \begin{cvitems}
-\item {Developed deep learning methods (attention networks, learning with missing modalities, uncertainty estimation) for segmentation, cell detection, and spatial analysis of large multiplexed immunofluorescence and 3D microscopy datasets (confocal, light-sheet), enabling quantitative cell phenotyping across heterogeneous marker panels, leading to multiple publications in renowned scientific journals}
+\item {Conducted research on deep learning methods (attention networks, learning with missing modalities, uncertainty estimation) to facilitate image analysis tasks (segmentation, detection, regression, and classification) of large 3D microscopy datasets, leading to multiple publications in renowned scientific journals}
 \item {Collaborated with biologists, clinicians, and healthcare companies, on multiple imaging domains (MRI, ultrasound, micro-CT, and different microscopy types), including software development for users with no programming experience, leading to scientific publications and research funding}
 \item {Wrote research grants resulting in project funding, supervision of 7 students, teaching, and organization of seminars}
 % ALT-ITEM — alternate phrasings for the doctoral-researcher bullets above
