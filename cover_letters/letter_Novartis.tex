@@ -1,0 +1,111 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awesome Cover Letter
+% XeLaTeX Template
+% Version 1.1 (9/1/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Claud D. Park (posquit0.bj@gmail.com)
+% Lars Richter (mail@ayeks.de)
+% With modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template must be compiled with XeLaTeX, the below lines will ensure this
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt, letter]{ag-cv} % A4 paper size by default, use 'letterpaper' for US letter
+
+\geometry{left=2cm, top=1.3cm, right=2cm, bottom=1.9cm, footskip=.5cm} % Configure page margins with geometry
+
+\fontdir[fonts/] % Specify the location of the included fonts
+\usepackage{ragged2e}
+
+% Color for highlights
+\definecolor{awesome}{HTML}{1c85c7} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%----------------------------------------------------------------------------------------
+
+\name{}{Alvaro Gomariz}
+\address{Imfeldstrasse 103,
+CH-8037 Z\"urich}
+
+% External application: personal email (Roche address kept commented).
+\email{alvarogomarizc@gmail.com}
+% \email{alvaro.gomariz@roche.com}
+\orcid{0000-0002-6172-5190}
+\linkedin{alvarogomariz}
+\gscholar{https://scholar.google.com/citations?hl=en&user=v4JtSZcAAAAJ}
+\mobile{ +41 (0)76 773 14 72}
+
+%----------------------------------------------------------------------------------------
+%	RECIPIENT/POSITION/LETTER INFORMATION
+%----------------------------------------------------------------------------------------
+
+% \recipient{}{Novartis} % Generic opening, no recipient block (see \makelettertitlenorec)
+
+\letterdate{Z\"urich, 10th September 2026}
+
+\lettertitle{Application for AI Scientist, Image Analysis \& Digital Pathology (Req. REQ-10084320)}
+
+\letteropening{Dear Hiring Team,}
+
+\letterclosing{Kind regards,}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvheader % Print the header
+
+\makelettertitlenorec % Print the title
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\begin{cvletter}
+
+%------------------------------------------------
+
+\begin{flushleft}
+
+I am excited to apply for this role because it sits  at the intersection that has defined my work: developing quantitative methods for biological imaging and using them to answer biological and clinical questions. Applying AI to digital pathology and spatial imaging in support of oncology drug discovery is exactly where I would like to bring the combination of foundation-model, cell-level, and spatial imaging experience I have developed over the past decade.
+
+At Roche, I led our early work in digital pathology, providing technical leadership to a team developing a company-wide foundation model on tens of millions of H&E whole-slide images. We adapted self-supervised architectures such as DINOv2 for distributed pre-training, ultimately delivering the model as an internal software package and publishing three papers with me as lead author. In parallel, I developed a proof of concept for lung-cancer patient stratification directly from H&E using multiple-instance learning, graph neural networks, and survival analysis. Throughout this work, I collaborated closely with pathologists to ground model development in the clinical and biological setting, interpret whole-slide images, and make model outputs interpretable.
+
+This built on my earlier research developing deep-learning methods for cell detection, phenotyping, and spatial analysis of multiplexed immunofluorescence and 3D microscopy, published in Nature Machine Intelligence, Science Advances, and Nature Communications. Quantifying cell types and their spatial relationships in tissue across heterogeneous marker panels is closely aligned with the cell phenotyping and spatial-biology questions in this role, and remains an area I find particularly compelling.
+
+I also care about how these methods are evaluated and delivered: careful validation and benchmarking beyond headline accuracy, uncertainty-aware evaluation, and reproducible software and workflows that others can maintain and reuse. These principles have been central to how I approach both research and applied AI development.
+
+More recently, I have led the technical and scientific direction of our AI video-colonoscopy program, owning the algorithm roadmap and aligning scientists, engineers, biostatisticians, and clinicians on evidence supporting a late-stage clinical program. Although the imaging modality differs from pathology, the work is deeply multimodal, combining imaging and clinical data in prognostic models, and has further strengthened how I integrate heterogeneous data around clinically meaningful questions.
+
+Across my work in imaging, biology, and clinical development, I have communicated results through publications and scientific conferences and worked closely with multidisciplinary teams. I would welcome the opportunity to bring my experience in digital pathology, self-supervised foundation models, quantitative cell and spatial imaging, multimodal modeling, and translational AI to your team.
+
+Thank you for considering my application.
+\end{flushleft}
+
+\end{cvletter}
+
+%----------------------------------------------------------------------------------------
+
+\makeletterclosing % Print the signature and enclosures
+
+\end{document}
